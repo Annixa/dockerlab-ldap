@@ -1,0 +1,11 @@
+dockerlab-ldap:
+  image: osixia/openldap:1.1.2
+  container_name: dockerlab-ldap
+  env_file:
+    - passwords.env
+
+dockerlab-ldap-edit:
+  image: osixia/phpldapadmin
+  container_name: dockerlab-ldap-edit
+  links:
+    - dockerlab-ldap

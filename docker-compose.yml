@@ -1,6 +1,9 @@
-dockerlab-ldap:
-  image: osixia/openldap:1.1.2
+dockerlab-ldap: 
+  build: . # image: osixia/openldap:1.1.2
   container_name: dockerlab-ldap
+  # ports:
+    # - "389"
+    # - "636"
   env_file:
     - passwords.env
 
